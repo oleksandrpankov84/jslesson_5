@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ДЗ №5 Задача №10</title>
+</head>
+<body>
+	<header>
+		<h1>Задача №9</h1>
+	</header>
+	<main>
+		<p>Користувач загадує число. Комп’ютер задає питання поки не вгадає число користувача (використати confirm).</p>
+		<h2>Розвʼязок:</h2>
+		<script>
+			const userNum=parseInt(prompt('Введить число від 1 до 5','1'))
+			const minNum=1
+			const maxNum=5
+			for (var counter = 1; counter < +Infinity; counter++) {
+				let compNum=Math.floor(Math.random()*(maxNum-minNum+1)+minNum)
+				if (confirm(`Спроба ${counter}. Введене Вами число дорівнює ${compNum}`)) break
+			}
+			document.write(`
+			<p>Введене Вами число ${userNum}.</p>
+			<p>Кількість спроб = ${counter}</p>`)
+		</script>
+	</main>
+</body>
+</html>

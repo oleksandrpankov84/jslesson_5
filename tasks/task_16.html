@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ДЗ №5 Задача №16</title>
+</head>
+<body>
+	<header>
+		<h1>Задача №16</h1>
+	</header>
+	<main>
+		<p>Користувач поступово вводить прибуток магазину за кожен день протягом N тижнів. Знайти загальну величину прибутку та вивести величину прибутку протягом кожного окремого тижня.</p>
+		<h2>Розвʼязок:</h2>
+		<script>
+			const userWeeks=parseInt(prompt('Введіть кількість тижнів','1'))
+			const dayInWeek=7
+			let totalIncome=0
+			for (let w = 0; w < userWeeks; w++) {
+				let weakIncome=0
+				for (let i = 1; i <= dayInWeek; i++) {
+					let incomeDay=parseFloat(prompt(`Введить ваш прибуток за ${(w*dayInWeek+i)} день`))
+					totalIncome+=incomeDay
+					weakIncome+=incomeDay
+					if (i===dayInWeek) {
+						document.write(`<p>Ваш прибуток за ${w+1}й тиждень: ${weakIncome}грн.</p>`)
+					}
+				}
+			}
+			document.write(`<p>Ваш загальний прибуток складає: ${totalIncome}грн.</p>`)
+		</script>
+	</main>
+</body>
+</html>

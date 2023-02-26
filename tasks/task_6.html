@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ДЗ №5 Задача №6</title>
+</head>
+<body>
+	<header>
+		<h1>Задача №6</h1>
+	</header>
+	<main>
+		<p>Задача 6. Вивести 3 таблиці (по 3 рядки і 3 стовпці у кожній) за зразком</p><br>
+		<img src="../img/Picture6.svg" alt="Picture6">
+		<h2>Розвʼязок:</h2>
+		<script>
+			let counter=1
+			for (let t = 0; t < 3; t++) {
+				document.write('<table border=1px')
+				for (let i = 0; i < 3; i++) {
+					document.write(`<tr>`)
+						for (let j = 0; j < 3; j++) {
+							document.write(`<td> ${counter} </td>`)		
+							counter++				
+						}
+					document.write(`</tr>`)
+				}
+				document.write('</table><br>')	
+			}
+		</script>
+	</main>
+</body>
+</html>

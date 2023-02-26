@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ДЗ №5 Задача №12</title>
+</head>
+<body>
+	<header>
+		<h1>Задача №12</h1>
+	</header>
+	<main>
+		<p>Ігровий автомат. Випадково вибираємо зображення у 3 позиціях. Вибір у кожній позиції вибирається як одне з чотирьох зображень. Вивести ці зображення і повідомити виграш користувача (три перших зображення 100 грн, три других – 200, три третіх – 500, три четвертих зображення – 1000грн). Використати цикли і switch (для вибору зображення за номером).</p>
+		<h2>Розвʼязок:</h2>
+		<script>
+			let lotteryResult=''
+			for (let i = 0; i < 3; i++) {
+				let picNum = Math.floor(Math.random()*4+1)
+				lotteryResult+=String(picNum)
+				document.write(`<img src="../img/pic12-${picNum}.png" alt="pic">`)
+			}
+			let printResult
+			switch (lotteryResult) {
+				case '111':
+					printResult="Ви виграли 100грн"
+					break;
+				case '222':
+					printResult="Ви виграли 200грн"
+					break;
+				case '333':
+					printResult="Ви виграли 500грн"
+					break;
+				case '444':
+					printResult="Ви виграли 1000грн"
+					break;
+				default:
+				printResult="Нажаль Вам не вдалося виграти. Спробуйте ще."
+					break;
+			}
+			document.write(`<br> ${printResult}`)
+		</script>
+	</main>
+</body>
+</html>

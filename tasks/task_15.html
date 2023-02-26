@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ДЗ №5 Задача №15</title>
+</head>
+<body>
+	<header>
+		<h1>Задача №15</h1>
+	</header>
+	<main>
+		<p>Користувача поступово вводить показники температури протягом року. Знайти середню температуру.</p>
+		<h2>Розвʼязок:</h2>
+		<script>
+			const totalMonth = 12
+			let sumTemp=0
+			for (let i = 1; i <=totalMonth; i++) {
+				let monthTemp=parseFloat(prompt(`Введіть температуру за ${i}й місяць`))
+				document.write(`<p>Температура ${i}го місяця: ${monthTemp}</p>`)
+				sumTemp+=monthTemp
+			}
+			document.write(`<p>Середня температура за рік складає: ${(sumTemp/totalMonth).toFixed(1)}(°C)</p>`)
+		</script>
+	</main>
+</body>
+</html>

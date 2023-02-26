@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ДЗ №5 Задача №13</title>
+</head>
+<body>
+	<header>
+		<h1>Задача №13</h1>
+	</header>
+	<main>
+		<p>Морський бій. Комп’ютер випадково розташовує одиночний корабель на полі розміром N*M. Маючи К снарядів користувач намагається потопити корабель.</p>
+		<!-- Розвʼязок: -->
+		<script>
+			const seaSizeN=parseInt(prompt('Введіть розмірморського поля N','1'))
+			const seaSizeM=parseInt(prompt('Введіть розмірморського поля M','1'))
+			const shots=parseInt(prompt('Введіть кількість пострілів К'))
+			const seaPositionN=Math.floor(Math.random()*seaSizeN+1)
+			const seaPositionM=Math.floor(Math.random()*seaSizeM+1)
+			for (let i = 1; i <= shots; i++) {
+				let userShotN=parseInt(prompt('Для пострілу введить координату N'))
+				let eserShotM=parseInt(prompt('Для пострілу введить координату M'))
+				if (userShotN===seaPositionN && eserShotM===seaPositionM){
+					alert(`Ви потопили корабель.`)
+					break
+				} else if(shots===i){
+					alert('Ви використали всі снаряди. Знищити ворожий корбаль не вдалося.')
+					break
+				} else{
+					alert(`Ви не влучили по ворожому кораблю! Залишилось пострілів ${shots-i}`)
+				}
+			}
+		</script>
+	</main>
+</body>
+</html>

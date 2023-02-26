@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ДЗ №5 Задача №14</title>
+</head>
+<body>
+	<header>
+		<h1>Задача №14</h1>
+	</header>
+	<main>
+		<p>Каса. Користувачу повідомляють суму, яку йому треба сплатити. Користувач поступово вводить суму грошей до тих пір, поки суми не буде достатньо для оплати товарів (кожного разу користувачу повідомляють, яку ще суму потрібно ввести).</p>
+		<!-- <h2>Розвʼязок:</h2> -->
+		<script>
+			const productPrice=100
+			let monyPayd=parseFloat(prompt(`Товар коштує ${productPrice}грн. Введить сумму грошей`))
+			let payment
+			while (monyPayd<productPrice) {
+				payment=parseFloat(prompt(`Товар коштує ${productPrice}грн. Ви внесли ${monyPayd}грн. внесить ще ${productPrice-monyPayd}грн.`))
+				monyPayd+=payment
+			}
+			if (monyPayd>productPrice){
+				alert(`Ви внесли ${monyPayd}грн. Ваша решта ${monyPayd-productPrice}грн. Дякуємо за покупку. Приходьте ще.`)
+			}else {
+				alert('Дякуємо за покупку. Приходьте ще.')
+			}
+		</script>
+	</main>
+</body>
+</html>
